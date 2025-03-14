@@ -2,7 +2,7 @@ package sort
 
 // QuickSort performs a quick sort on a slice of numeric values.
 // It uses the divide-and-conquer strategy by selecting a 'pivot' element
-// and partitioning the array around it such that smaller elements are on the left
+// and partitioning the surrounding array such that smaller elements are on the left
 // and larger elements are on the right.
 // Time Complexity:
 //   - Average Case: O(n log n)
@@ -22,8 +22,8 @@ func QuickSort[T number](arr []T) []T {
 func quickSort[T number](arr []T, left, right int) []T {
 	if left < right {
 		pivot := partition(arr, left, right)
-		quickSort(arr, left, pivot-1)
-		quickSort(arr, pivot+1, right)
+		_ = quickSort(arr, left, pivot-1)
+		_ = quickSort(arr, pivot+1, right)
 	}
 
 	return arr

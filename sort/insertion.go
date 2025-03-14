@@ -11,12 +11,14 @@ package sort
 // Space Complexity: O(1) as it sorts in-place
 func InsertionSort[T number](arr []T) []T {
 	n := len(arr)
-	for i := range n - 1 {
-		for j := i + 1; j > 0; j-- {
-			if arr[j] < arr[j-1] {
-				arr[j], arr[j-1] = arr[j-1], arr[j]
-			}
+	for i := 1; i < n; i++ {
+		key := arr[i]
+		j := i - 1
+		for j >= 0 && arr[j] > key {
+			arr[j+1] = arr[j]
+			j--
 		}
+		arr[j+1] = key
 	}
 
 	return arr

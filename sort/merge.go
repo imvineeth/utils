@@ -36,10 +36,10 @@ func merge[T number](arr []T, left, mid, right int) {
 	n2 := right - mid
 	L := make([]T, n1)
 	R := make([]T, n2)
-	for i := range n1 {
+	for i := 0; i < n1; i++ {
 		L[i] = arr[left+i]
 	}
-	for i := range n2 {
+	for i := 0; i < n2; i++ {
 		R[i] = arr[mid+1+i]
 	}
 	i, j, k := 0, 0, left

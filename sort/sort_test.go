@@ -8,7 +8,7 @@ import (
 
 func generateRandomSliceInt(size int) []int {
 	slice := make([]int, size)
-	for i := range size {
+	for i := 0; i < size; i++ {
 		slice[i] = rand.Intn(1000)
 	}
 	return slice
@@ -16,7 +16,7 @@ func generateRandomSliceInt(size int) []int {
 
 func generateRandomSliceFloat(size int) []float64 {
 	slice := make([]float64, size)
-	for i := range size {
+	for i := 0; i < size; i++ {
 		slice[i] = rand.Float64() * 1000
 	}
 	return slice
@@ -159,7 +159,10 @@ func BenchmarkSort(b *testing.B) {
 			b.Run(fn.Name+"-"+bm.name+"("+strconv.Itoa(bm.size)+")", func(b *testing.B) {
 				b.ResetTimer()
 				for i := 0; i < b.N; i++ {
-					fn.Fn(input)
+					// Create a fresh copy of the input for each iteration
+					inputCopy := make([]int, len(input))
+					copy(inputCopy, input)
+					fn.Fn(inputCopy)
 				}
 			})
 		}

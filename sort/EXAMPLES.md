@@ -20,7 +20,7 @@ func main() {
 #### Output
 
 ```
-Sorted Numbers: [1, 2, 3, 4, 5]
+Sorted Numbers: [1 2 3 4 5]
 ```
 
 ### Selection Sort
@@ -43,7 +43,7 @@ func main() {
 #### Output
 
 ```
-Sorted Numbers: [1, 2, 3, 4, 5]
+Sorted Numbers: [1 2 3 4 5]
 ```
 
 ### Insertion Sort
@@ -66,7 +66,7 @@ func main() {
 #### Output
 
 ```
-Sorted Numbers: [1, 2, 3, 4, 5]
+Sorted Numbers: [1 2 3 4 5]
 ```
 
 ### Merge Sort
@@ -89,7 +89,7 @@ func main() {
 #### Output
 
 ```
-Sorted Numbers: [1, 2, 3, 4, 5]
+Sorted Numbers: [1 2 3 4 5]
 ```
 
 ### Quick Sort
@@ -112,7 +112,7 @@ func main() {
 #### Output
 
 ```
-Sorted Numbers: [1, 2, 3, 4, 5]
+Sorted Numbers: [1 2 3 4 5]
 ```
 
 ### Heap Sort
@@ -135,5 +135,5 @@ func main() {
 #### Output
 
 ```
-Sorted Numbers: [1, 2, 3, 4, 5]
+Sorted Numbers: [1 2 3 4 5]
 ```

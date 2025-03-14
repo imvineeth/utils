@@ -12,7 +12,7 @@ package sort
 // Space Complexity: O(1) as it sorts in-place
 func SelectionSort[T number](arr []T) []T {
 	n := len(arr)
-	for i := range n - 1 {
+	for i := 0; i < n-1; i++ {
 		minIndex := i
 		for j := i + 1; j < n; j++ {
 			if arr[j] < arr[minIndex] {

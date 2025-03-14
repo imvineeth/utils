@@ -7,8 +7,8 @@ package sort
 // Space Complexity: O(1) as it sorts in-place
 func BubbleSort[T number](arr []T) []T {
 	n := len(arr)
-	for i := range n - 1 {
-		for j := range n - i - 1 {
+	for i := 0; i < n; i++ {
+		for j := 0; j < n-i-1; j++ {
 			if arr[j] > arr[j+1] {
 				arr[j], arr[j+1] = arr[j+1], arr[j]
 			}

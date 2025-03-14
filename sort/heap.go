@@ -5,12 +5,6 @@ package sort
 // Time Complexity: O(n log n)
 // Space Complexity: O(1)
 func HeapSort[T number](arr []T) []T {
-	return heapSort(arr)
-}
-
-// heapSort is an internal implementation of heap sort algorithm.
-// It first builds a max heap and then repeatedly extracts the maximum element.
-func heapSort[T number](arr []T) []T {
 	n := len(arr)
 	// Build max heap
 	for i := n/2 - 1; i >= 0; i-- {
